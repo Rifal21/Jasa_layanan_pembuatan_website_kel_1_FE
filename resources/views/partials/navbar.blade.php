@@ -12,7 +12,7 @@
               <a class="nav-link" href="#">Tentang</a>
               <a class="nav-link" href="#">Portofolio</a>
             </div>
-            <a class="nav-link btn btn-warning text-white rounded" href="#">Masuk</a>
+            <a class="nav-link btn btn-warning text-white rounded" href="/login">Masuk</a>
           </div>
         </div>
       </nav>
