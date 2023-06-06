@@ -12,11 +12,11 @@
         <main class="form-signin w-100 m-auto text-center mb-5">       
 
           <img class="mb-3" src="/img/Citta Nirmala.png" alt="" width="250" >
-          <h1 class="h3 mb-5 fw-normal">Please Login</h1>
+          <h1 class="h3 mb-5 fw-normal">{{ $title }}</h1>
           <form action="/login" method="POST">
             @csrf
             <div class="form-floating">
-              <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
+              <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required ">
               <label for="email">Email address</label>
               @error('email')
                 <div class="invalid-feedback">
