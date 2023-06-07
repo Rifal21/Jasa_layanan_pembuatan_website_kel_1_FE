@@ -29,6 +29,11 @@ Route::get('/layanan', function () {
         'title' => 'Layanan'
     ]);
 });
+Route::get('/layanandet', function () {
+    return view('layanandet', [
+        'title' => 'Layanan Detail'
+    ]);
+});
 
 Route::get('/login' , [LoginController::class , 'index']);
 Route::get('/register' , [RegisterController::class , 'index']);
