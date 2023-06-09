@@ -22,9 +22,9 @@
           <input type="password" name="password" class="form-control" id="Password" placeholder="Password" required>
           <label for="Password">Password</label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        <button class="w-100 btn btn-lg btn-warning text-light" type="submit">Login</button>
       </form>
-      <small class="d-block text-center mt-3">Not registered? <a href="/register" class="text-decoration-none">Register Now!</a></small>
+      <small class="d-block text-center mt-3 text-light">Belum punya akun? <a href="/register" class="text-decoration-none text-warning fw-bold">Daftar disini</a></small>
     </main> 
   </div> 
 </div>
