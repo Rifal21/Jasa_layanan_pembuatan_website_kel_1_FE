@@ -7,7 +7,12 @@
 
       <img class="mb-3" src="/img/robot .png" alt="" width="250" >
       <h1 class="h3 mb-5 fw-normal">IMR Login</h1>
-      <form action="/login" method="POST">
+      @if (session()->has('success'))
+      <div class="alert alert-success" role="alert">
+        {{ session('success') }} , silahkan login untuk melanjutkan!
+      </div>
+      @endif
+      <form action="" method="POST">
         @csrf
         <div class="form-floating">
           <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">

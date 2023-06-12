@@ -37,3 +37,4 @@ Route::get('/layanandet', function () {
 
 Route::get('/login' , [LoginController::class , 'index']);
 Route::get('/register' , [RegisterController::class , 'index']);
+Route::post('/auth/register' , [RegisterController::class , 'store']);
