@@ -12,7 +12,28 @@
               <a class="nav-link" href="/tentang">Tentang</a>
               <a class="nav-link" href="/portofolio">Portofolio</a>
             </div>
-            <a class="nav-link btn btn-warning text-white rounded" href="/login">Masuk</a>
+            <ul class="navbar-nav">
+              @auth
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Welcome back, {{ auth()->user()->name }}
+                </a>
+                <ul class="dropdown-menu">
+                  {{-- <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li> --}}
+                  <li>
+                    <form action="/logout" method="POST">
+                      @csrf
+                      <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              @else
+              <li class="nav-item">
+                <a href="/login" class="nav-link btn btn-warning text-light">Masuk</a>
+              </li>
+            </ul>
+            @endauth
           </div>
         </div>
       </nav>
