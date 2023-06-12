@@ -14,7 +14,7 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function registrasi(Request $request)
     {
         // $validatedData = $request->validate([
         //     'name' => ['required' , 'max:125' ],

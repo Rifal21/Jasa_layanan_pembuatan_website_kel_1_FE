@@ -36,5 +36,7 @@ Route::get('/layanandet', function () {
 });
 
 Route::get('/login' , [LoginController::class , 'index']);
+Route::post('/logout' , [LoginController::class , 'logout']);
+Route::post('/auth/login' , [LoginController::class , 'login']);
 Route::get('/register' , [RegisterController::class , 'index']);
-Route::post('/auth/register' , [RegisterController::class , 'store']);
+Route::post('/auth/register' , [RegisterController::class , 'registrasi']);

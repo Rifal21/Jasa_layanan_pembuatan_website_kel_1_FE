@@ -12,7 +12,12 @@
         {{ session('success') }} , silahkan login untuk melanjutkan!
       </div>
       @endif
-      <form action="" method="POST">
+      @if (session()->has('loginError'))
+      <div class="alert alert-danger" role="alert">
+        {{ session('loginError') }} , silahkan isi data dengan benar untuk melanjutkan!
+      </div>
+      @endif
+      <form action="/auth/login" method="POST">
         @csrf
         <div class="form-floating">
           <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
