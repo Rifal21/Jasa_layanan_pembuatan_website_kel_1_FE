@@ -19,7 +19,9 @@
                   Welcome back, {{ auth()->user()->name }}
                 </a>
                 <ul class="dropdown-menu">
-                  {{-- <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Dashboard</a></li> --}}
+                  @can('admin')
+                  <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> Dashboard</a></li>
+                  @endcan
                   <li>
                     <form action="/logout" method="POST">
                       @csrf

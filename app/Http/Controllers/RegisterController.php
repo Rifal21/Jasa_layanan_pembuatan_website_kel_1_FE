@@ -29,6 +29,7 @@ class RegisterController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => $request->input('password'),
+            'role_id' => $request->input('role_id')
         ]);
 
         return redirect('/login')->with('success' , 'Akun Berhasil di daftarkan');
