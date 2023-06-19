@@ -1,8 +1,12 @@
 <?php
 
+use App\Models\RoleUser;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RoleUserController;
+use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\DashboardTemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +38,18 @@ Route::get('/layanandet', function () {
         'title' => 'Layanan Detail'
     ]);
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+})->middleware('admin');
+
+Route::get('/dashboard/users', function () {
+    return view('dashboard.users.index');
+})->middleware('admin');
+
+Route::resource('/dashboard/roleuser', RoleUserController::class)->middleware('admin');
+Route::resource('/dashboard/users', DashboardUserController::class)->middleware('admin');
+Route::resource('/dashboard/template', DashboardTemplateController::class)->middleware('admin');
 
 Route::get('/login' , [LoginController::class , 'index']);
 Route::post('/logout' , [LoginController::class , 'logout']);
