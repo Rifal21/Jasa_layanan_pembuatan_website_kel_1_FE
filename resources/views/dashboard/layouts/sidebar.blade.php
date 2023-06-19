@@ -14,19 +14,19 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link {{ Request::is('dashboard/template*') ? 'active' : '' }}" href="/dashboard/template">
+              <span data-feather="monitor" class="align-text-bottom"></span>
+              Template
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
               <span data-feather="grid" class="align-text-bottom"></span>
               Portfolio
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/users') ? 'active' : '' }}" href="/dashboard/users">
-              <span data-feather="monitor" class="align-text-bottom"></span>
-              Template
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/users') ? 'active' : '' }}" href="/dashboard/users">
+        <a class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}" href="/dashboard/users">
               <span data-feather="users" class="align-text-bottom"></span>
               Users
         </a>

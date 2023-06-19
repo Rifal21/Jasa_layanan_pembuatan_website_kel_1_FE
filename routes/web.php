@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RoleUserController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\DashboardTemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,7 @@ Route::get('/dashboard/users', function () {
 
 Route::resource('/dashboard/roleuser', RoleUserController::class)->middleware('admin');
 Route::resource('/dashboard/users', DashboardUserController::class)->middleware('admin');
+Route::resource('/dashboard/template', DashboardTemplateController::class)->middleware('admin');
 
 Route::get('/login' , [LoginController::class , 'index']);
 Route::post('/logout' , [LoginController::class , 'logout']);
