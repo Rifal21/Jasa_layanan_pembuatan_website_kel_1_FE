@@ -7,10 +7,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto px-4">
-              <a class="nav-link " aria-current="page" href="/">Home</a>
-              <a class="nav-link" href="/layanan">Layanan</a>
-              <a class="nav-link" href="/tentang">Tentang</a>
-              <a class="nav-link" href="/portofolio">Portofolio</a>
+              <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+              <a class="nav-link {{ Request::is('/layanan') ? 'active' : '' }} " href="/layanan">Layanan</a>
+              <a class="nav-link {{ Request::is('/tentang') ? 'active' : '' }}" href="/tentang">Tentang</a>
+              <a class="nav-link {{ Request::is('/portfolio') ? 'active' : '' }}" href="/portfolio">Portfolio</a>
+              <a class="nav-link {{ Request::is('/template') ? 'active' : '' }}" href="/template">Template</a>
             </div>
             <ul class="navbar-nav">
               @auth
