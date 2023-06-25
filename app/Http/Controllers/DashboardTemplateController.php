@@ -37,24 +37,21 @@ class DashboardTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        $response = Http::attach(
-            'gambar', 
-            $request->file('gambar')->getRealPath(), 
-            $request->file('gambar')->getClientOriginalName()
-        )->post('http://localhost:8000/dashboard/template/create', [
-            'kode_template' => $request->input('kode_template'),
-            'nama_template' => $request->input('nama_template'),
-            'slug' => $request->input('slug'),
-            'deskripsi' => $request->input('deskripsi')
-        ]);
+    $response = Http::post('http://localhost:8000/dashboard/template/create', [
+        'kode_template' => $request->input('kode_template'),
+        'nama_template' => $request->input('nama_template'),
+        // 'gambar' => $request->input('gambar'),
+        'slug' => $request->input('slug'),
+        'deskripsi' => $request->input('deskripsi'),
+    ]);
 
-        if ($response->successful()) {
-            // Data stored successfully
-            return redirect('/dashboard/template')->with('success', 'Data stored successfully.');
-        } else {
-            // Handle the API error
-            return redirect('/dashboard/template')->with('error', 'Failed to store data to the API.');
-        }
+    if ($response->successful()) {
+        // Data stored successfully
+        return redirect('/dashboard/template')->with('success', 'Data stored successfully.');
+    } else {
+        // Handle the API error
+        return redirect('/dashboard/template')->with('error', 'Failed to store data to the API.');
+    }
     }
 
     /**
@@ -62,23 +59,40 @@ class DashboardTemplateController extends Controller
      */
     public function show(Template $template)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Template $template)
+    public function edit($id)
     {
-        //
+        $template = Template::findOrFail($id);
+        return view('dashboard.template.edit',[
+            'template' => $template
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Template $template)
+    public function update(Request $request, $id)
     {
-        //
+        $response = Http::post("http://localhost:8000/dashboard/template/update/{$id}", [
+            'kode_template' => $request->input('kode_template'),
+            'nama_template' => $request->input('nama_template'),
+            // 'gambar' => $request->input('gambar'),
+            'slug' => $request->input('slug'),
+            'deskripsi' => $request->input('deskripsi'),
+        ]);
+
+        if ($response->successful()) {
+            // Data stored successfully
+            return redirect('/dashboard/template')->with('success', 'Data update successfully.');
+        } else {
+            // Handle the API error
+            return redirect('/dashboard/template')->with('error', 'Failed to update data to the API.');
+        }
     }
 
     /**

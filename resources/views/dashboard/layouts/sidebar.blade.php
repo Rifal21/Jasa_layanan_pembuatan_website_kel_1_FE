@@ -20,7 +20,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
+        <a class="nav-link {{ Request::is('dashboard/portfolio*') ? 'active' : '' }}" href="/dashboard/portfolio">
               <span data-feather="grid" class="align-text-bottom"></span>
               Portfolio
         </a>
