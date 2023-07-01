@@ -10,7 +10,7 @@
               </div>
             @endif
             <h1>Welcome to IMR Website</h1>
-              <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam, fugit accusantium quia aut temporibus aliquid! Sint, natus porro iste, itaque iusto tempora expedita ut modi vel corporis impedit culpa.</p>
+              <p class="mt-5">Tim IMR menyediakan layanan jasa web yang seo friendly dan mobile friendly, selain jasa pembuatan website profesional kami juga melakukan pemeliharaan berkala yang akan ditangani langsung oleh staf IT berpengalaman. Dengan biaya berlangganan yang terjangkau, anda bisa mendapatkan layanan konsultasi, pembuatan website, pengubahan tampilan, pengelolaan website, dan pemeliharaan server.</p>
               <a href="#" class="btn btn-warning text-dark fw-bold mb-3">Pesan Sekarang</a>
               <a href="#" class="btn btn-light text-dark fw-bold mb-3">Layanan Kami</a>
           </div>      
@@ -20,7 +20,7 @@
         @else   
         <div class="col-md-6 ">
           <h1>Welcome to IMR Website</h1>
-          <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam, fugit accusantium quia aut temporibus aliquid! Sint, natus porro iste, itaque iusto tempora expedita ut modi vel corporis impedit culpa.</p>
+          <p class="mt-5">Tim IMR menyediakan layanan jasa web yang seo friendly dan mobile friendly, selain jasa pembuatan website profesional kami juga melakukan pemeliharaan berkala yang akan ditangani langsung oleh staf IT berpengalaman. Dengan biaya berlangganan yang terjangkau, anda bisa mendapatkan layanan konsultasi, pembuatan website, pengubahan tampilan, pengelolaan website, dan pemeliharaan server.</p>
           <a href="#" class="btn btn-warning text-dark fw-bold mb-3">Pesan Sekarang</a>
           <a href="#" class="btn btn-light text-dark fw-bold mb-3">Layanan Kami</a>
         </div>

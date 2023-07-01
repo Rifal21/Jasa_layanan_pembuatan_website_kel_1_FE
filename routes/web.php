@@ -36,6 +36,11 @@ Route::get('/layanan', function () {
         'title' => 'Layanan'
     ]);
 });
+Route::get('/tentang', function () {
+    return view('tentang', [
+        'title' => 'Tentang'
+    ]);
+});
 Route::get('/template', function () {
     return view('template', [
         'title' => 'Template',
